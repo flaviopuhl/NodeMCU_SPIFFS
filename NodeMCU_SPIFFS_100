@@ -19,7 +19,13 @@ void setup() {
   while(file.available()){
     Serial.write(file.read());
   }
+  
+  Serial.println();
+  Serial.print("File size:");
+  Serial.println(file.size());
+
   file.close();
+  
 }
  
 void loop() {
